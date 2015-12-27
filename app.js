@@ -53,6 +53,7 @@ var url = require('url');
 
 var db = new sqlite3.Database('data/db_1200iRealSongs');
 var  app = express(); //create express middleware dispatcher
+app.set('port', (process.env.PORT || 3000));
 var urlObj; //we will parse user GET URL's into this object
 
 //Define middleware functions
@@ -268,6 +269,6 @@ app.use(addFooter);
 app.use(respondToClient);
 
 //create http-express server
-http.createServer(app).listen(3000);
+http.createServer(app).listen(app.get('port'));
 
 console.log('Server Running at http://127.0.0.1:3000  CNTL-C to quit');
