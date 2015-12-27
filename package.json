@@ -4,7 +4,7 @@
   "description": "test connection to sqlite",
   "main": "01_db_sqlite_access.js",
   "scripts": {
-    "test": "start"
+    "start": "node app.js"
   },
   "author": "L.D. Nel",
   "license": "ISC",
